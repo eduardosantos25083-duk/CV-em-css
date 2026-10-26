@@ -1,0 +1,239 @@
+/* CV EDUARDO - CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Georgia, serif;
+    background-color: #f7f5f0;
+    color: #2a2a2a;
+    line-height: 1.7;
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header p {
+    color: #777777;
+}
+
+/* TÍTULOS */
+
+h1, h2, h3 {
+    color: #111111;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* Pseudo-elemento: linha dourada depois dos títulos h2 */
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #b08d57;
+    margin-top: 8px;
+}
+
+/* TEXTO E LISTAS */
+
+p {
+    margin: 12px 0;
+}
+
+li {
+    padding: 4px;
+}
+
+/* LINKS */
+
+a {
+    color: #b08d57;
+}
+
+a:hover {
+    color: #111111;
+}
+
+/* Pseudo-elemento: seta nos links externos */
+a[href^="http"]::after {
+    content: " ↗";
+}
+
+/* MENU */
+
+nav {
+    background: #111111;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: #b08d57;
+    color: white;
+}
+
+/* SECÇÕES */
+
+section {
+    background: white;
+    color: #3d3d3d;
+    padding: 30px;
+    margin: 25px 0;
+    border: 1px solid #e8e3d9;
+}
+
+/* FLEXBOX - CARTÕES DA FORMAÇÃO */
+
+.cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cartao {
+    flex: 1 1 200px;
+    padding: 20px;
+    background: #faf8f4;
+    border-top: 2px solid #b08d57;
+}
+
+/* IMAGEM */
+
+img {
+    max-width: 100%;
+    border: 1px solid #e8e3d9;
+    border-radius: 5px;
+}
+
+/* TABELA */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #e8e3d9;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #111111;
+    color: white;
+}
+
+/* FORMULÁRIO */
+
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: Georgia, serif;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #b08d57;
+}
+
+button {
+    background: #111111;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b08d57;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777777;
+}
+
+/* RESPONSIVIDADE */
+
+/* Mobile: até 600px */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Tablet: de 601px a 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .cartao {
+        flex: 1 1 45%;
+    }
+}
+
+/* Desktop: a partir de 1025px */
+@media (min-width: 1025px) {
+    body {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .cartao {
+        flex: 1 1 30%;
+    }
+}
